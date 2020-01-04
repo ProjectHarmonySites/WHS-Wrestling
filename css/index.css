@@ -12,6 +12,17 @@ html, body {
     background: transparent;
 }
 
+/* Abstract Paint */
+.paint {
+    position: absolute;
+}
+
+#blue_top_left {
+    top: 10em;
+    left: -20px;
+    height: 40em;
+}
+
 /* Blue: #4169e1 */
 
 iframe {

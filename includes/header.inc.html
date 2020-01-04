@@ -5,13 +5,30 @@
     <body>
         <header>
             <div class="wrapper">
-                <a href="../"><img src="../images/logo_header_gray.png" alt="Text Header Logo" /></a>
-                <ul>
-                    <li><a href="">Roster</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Schedule</a></li>
+                <img src="../images/logo_header_gray.png" alt="Text Header Logo" />
+                <ul id="links" class="moved">
+                    <a href="../"><li>Home</li></a>
+                    <a href=""><li>Roster</li></a>
+                    <a href=""><li>About</li></a>
+                    <a href=""><li>Schedule</li></a>
                 </ul>
+                <div class="burger hidden" onclick="toggle()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
             </div>
         </header>
+        <script>
+            function toggle() {
+                var links = document.getElementById("links");
+
+                if(links.classList.contains("moved")) {
+                    links.classList.remove("moved");
+                } else {
+                    links.classList.add("moved");
+                }
+            }
+        </script>
     </body> 
 </html>
