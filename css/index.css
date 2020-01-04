@@ -1,18 +1,21 @@
+
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 /* Blue: #4169e1 */
 
-header {
-    height: 35vh;
-    background-color: #ffffff;
-}
-
-header img {
-    margin: 1.25em 0 0 1.25em;
-    width: 50vw;
-    height: auto;
+iframe {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }

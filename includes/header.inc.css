@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 15vh;
+    background-color: #4169e1;
+}
+
+header img {
+    margin: 2vh 0 0 1.25em;
+    height: 13vh;
+    width: auto;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3vw 0 0;
+}
+
+header .wrapper ul {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    align-self: center;
+}
+
+header .wrapper ul li {
+    list-style: none;
+}
+
+header .wrapper ul li a {
+    color: #f7f7f7;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: "Permanent Marker", "Cursive", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+header .wrapper ul li a:hover {
+    color: #202020;
+}
+
+@media only screen and (max-width: 990px) {
+    header .wrapper ul {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    header .wrapper ul {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    header .wrapper ul {
+        position: absolute;
+        right: -60vw;
+        top: 17vh;
+        height: 50vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .wrapper ul li {
+        background-color: #202020;
+        padding: 5vh;
+        width: 50vw;
+        text-align: center;
+        border-radius: 4px;
+        align-self: center;
+    }
+}
+
+/* TODO : Add class that allows you to move the things back into view
