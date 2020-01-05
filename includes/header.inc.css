@@ -19,6 +19,7 @@ header img {
     margin: 1em 0 0 1.25em;
     height: 5em;
     width: auto;
+    cursor: pointer;
 }
 
 header .wrapper {
@@ -64,6 +65,7 @@ header .wrapper ul li:hover {
 header .wrapper .burger {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 header .wrapper .burger .line {
@@ -74,38 +76,18 @@ header .wrapper .burger .line {
     margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 1100px) {
-    header img {
-        width: 45vw;
-    }
-}
-
 @media only screen and (max-width: 990px) {
-    header img {
-        width: 45vw;
-    }
-
     header .wrapper ul {
         width: 50vw;
     }
 }
 
-@media only screen and (max-width: 850px) {
-    header img {
-        width: 40vw;
-    }
-}
-
 @media only screen and (max-width: 760px) {
-    header img {
-        width: 60vw;
-    }
-
     header .wrapper ul {
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 15vh;
+        top: 17vh;
         right: 50vw;
     }
 

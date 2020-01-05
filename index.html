@@ -8,21 +8,26 @@
 
     <link rel="stylesheet" href="includes/header.inc.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/include.js"></script>
 </head>
 <body>
     <!--Abstract Paint-->
     <img id="blue_top_left" class="paint" src="images/paint/lander/blue_top_left.png" alt="Blue Paint Blob">
 
     <!--Header-->
-    
-    <script src="js/include.js"></script>
-    <div w3-include-html="includes/header.inc.html"></div>
 
-    <div id="card">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus illum nam voluptatem assumenda saepe voluptates ea adipisci sunt minus corrupti.</p>
-        <button><p>Learn More</p></button>
-    </div>
+    <span w3-include-html="includes/header.inc.xml"></span>
+    <script src="includes/header.inc.js"></script>
+
+    <span id="card-wrapper">
+        <div id="card">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus illum nam voluptatem assumenda saepe voluptates ea adipisci sunt minus corrupti.</p>
+            <button><p>Learn More</p></button>
+            <img src="images/paint/lander/red_card.png" alt="Red Paint Blob" id="red_card">
+        </div>
+    </span>
 
     <script>includeHTML();</script>
 
