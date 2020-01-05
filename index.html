@@ -6,12 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WMS | Wrestling</title>
 
+    <link rel="stylesheet" href="includes/header.inc.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <!--Abstract Paint-->
     <img id="blue_top_left" class="paint" src="images/paint/lander/blue_top_left.png" alt="Blue Paint Blob">
 
-    <iframe src="includes/header.inc.html" frameborder="0" seamless></iframe>
+    <!--Header-->
+    
+    <script src="js/include.js"></script>
+    <div w3-include-html="includes/header.inc.html"></div>
+
+    <div id="card">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus illum nam voluptatem assumenda saepe voluptates ea adipisci sunt minus corrupti.</p>
+        <button><p>Learn More</p></button>
+    </div>
+
+    <script>includeHTML();</script>
+
 </body>
 </html>
