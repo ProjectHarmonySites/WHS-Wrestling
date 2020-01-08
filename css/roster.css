@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #F3F3F3;
+}
+
+table {
+    margin: 2em 0 0 0;
+    width: 90vw;
+    border-collapse: collapse;
+    border: 2px solid #00000025;
+    font-size: 1.2rem;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+table tr {
+    text-align: center;
+}
+
+td {
+    border: 2px solid #00000035;
+    height: 50px;
+    vertical-align: middle;
+    font-family: "Handlee";
+}
+
+th {
+    background-color: #4169e1;
+    color: #ffffff;
+    font-family: "Handlee";
+    font-size: 1.5rem;
+    font-weight: 5000;
+    border: 2px solid #00000035;
+    height: 50px;
+    vertical-align: middle;
+}

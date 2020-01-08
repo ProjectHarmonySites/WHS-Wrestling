@@ -13,6 +13,8 @@ html, body {
 header {
     height: 6em;
     background-color: #4169e1;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 header img {
