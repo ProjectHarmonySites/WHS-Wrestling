@@ -36,7 +36,7 @@ table tr:hover {
 }
 
 td {
-    border: 2px solid #00000035;
+    border: none;
     height: 50px;
     vertical-align: middle;
     font-family: "Handlee";
@@ -48,7 +48,7 @@ th {
     font-family: "Handlee";
     font-size: 1.5rem;
     font-weight: 5000;
-    border: 2px solid #00000035;
+    border: none;
     height: 50px;
     vertical-align: middle;
 }
