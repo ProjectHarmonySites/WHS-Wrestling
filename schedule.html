@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schedule | WHS Wrestling</title>
+
+    <link rel="stylesheet" href="includes/header.inc.css">
+    <link rel="stylesheet" href="css/schedule.css">
+
+    <script src="js/include.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <span w3-include-html="includes/header.inc.xml"></span>
+    <script src="includes/header.inc.js"></script>
+
+    <div id="map">        
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Competators</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>WHS vs. AHS</td>
+                <td>10/6/25</td>
+                <td>12:00pm</td>
+                <td class="place" onclick="findSchool(this);">Williamstown High School</td>
+            </tr>
+            <tr>
+                <td>WHS vs. RHS</td>
+                <td>10/8/25</td>
+                <td>1:00pm</td>
+                <td class="place" onclick="findSchool(this);">Random High School</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="js/schedule.js"></script>
+    <script>includeHTML();</script>
+</body>
+</html>
