@@ -32,6 +32,11 @@ html, body {
 
 /* START CARD */
 
+.card-wrapper {
+    width: 100vw;
+    height: 125vh;
+}
+
 #card {
     display: flex;
     flex-direction: column;
