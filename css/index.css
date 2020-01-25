@@ -1,3 +1,8 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap');
+
+/* Blue: #4169e1 */
+
 html, body {
     overflow-x: hidden;
     margin: 0;
@@ -5,6 +10,21 @@ html, body {
     box-sizing: border-box;
 }
 
-.bg-brave-blue {
-    background-color: #0A36B4;
+.navbar-title {
+    font-family: "Poppins";
+    font-weight: 900;
 }
+
+.bg-brave-blue {
+    background-color: #4169e1;
+}
+
+.table-blue {
+    background-color: #4169e1;
+}
+
+#main-image {
+    width: 100vw;
+    height: auto;
+}
+
