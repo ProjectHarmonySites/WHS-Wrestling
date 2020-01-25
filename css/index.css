@@ -28,3 +28,54 @@ html, body {
     height: auto;
 }
 
+table {
+    margin: 2em 0 0 0;
+    width: 90vw;
+    border-collapse: collapse;
+    border: 2px solid #00000025;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none !important;
+}
+
+table tr {
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: rgb(252, 252, 252);
+}
+
+td {
+    border: none;
+    height: 50px;
+    vertical-align: middle;
+    font-family: "Handlee";
+}
+
+th {
+    background-color: #4169e1 !important;
+    color: #ffffff;
+    font-family: "Handlee";
+    font-size: 1.5rem;
+    font-weight: 5000;
+    border: none;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.place {
+    color: #4169e1;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+

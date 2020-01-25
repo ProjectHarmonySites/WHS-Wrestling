@@ -42,8 +42,34 @@
           <img src="images/jumbotron.jpg" id="main-image" alt="">
       </section>
 
-      <table>
-      </table>
+      <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Competators</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>WHS vs. AHS</td>
+                <td>10/6/25</td>
+                <td>12:00pm</td>
+                <td class="place" onclick="findSchool(this);">Williamstown High School</td>
+            </tr>
+            <tr>
+                <td>WHS vs. RHS</td>
+                <td>10/8/25</td>
+                <td>1:00pm</td>
+                <td class="place" onclick="findSchool(this);">Random High School</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><a href="schedule.html">See More</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
