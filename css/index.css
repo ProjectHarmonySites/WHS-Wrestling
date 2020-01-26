@@ -89,6 +89,7 @@ th {
     border: 2px solid #00000025;
     border-top: none;
     height: 50px;
+    margin: 0 0 5em 0;
 }
 
 #table-ext a {
@@ -97,4 +98,36 @@ th {
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+}
+
+footer {
+    background-color: #172d4d;
+    position: relative;
+    color: #ffffff;
+    font-family: "Poppins";
+}
+
+.copyright p {
+    margin: 0;
+    color: #eeeeee6c;
+}
+
+footer .sections {
+    padding: 1em 0 0 0;
+    font-family: "Permanent Marker";
+}
+
+footer .sections li {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-style: italic;
+}
+
+footer .sections ul {
+    margin: 1em 0 0 0;
+}
+
+footer .sections a {
+    text-decoration: underline;
+    font-style: italic;
 }

@@ -1,84 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- SEO Optimization -->
-    <meta name="descrption" content="Williamstown High School Wrestling Team. ... Coached by Jonathan Jernegan, a well respected and valued coach, this team knows how to pin to win!">
+  <!-- SEO Optimization -->
+  <meta name="descrption" content="Williamstown High School Wrestling Team. ... Coached by Jonathan Jernegan, a well respected and valued coach, this team knows how to pin to win!">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Internal Stylesheets -->
-    <link rel="stylesheet" href="css/index.css">
+  <!-- Internal Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
 
-    <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon">
 
-    <title>Williamstown Wrestling</title>
+  <title>Williamstown Wrestling</title>
 </head>
 <body>
-    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-brave-blue">
-        <a class="navbar-brand navbar-title" href="/">Williamstown Wrestling</a>
+        <a href="/" class="navbar-brand navbar-title">Williamstown Wrestling</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="roster">Roster</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="schedule">Schedule</a>
-              </li>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a href="/" class="nav-link">Home<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="roster" class="nav-link">Roster</a></li>
+              <li class="nav-item"><a href="schedule" class="nav-link">Schedule</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <img src="images/jumbotron.jpg" id="main-image" alt="Team Photo">
+    </section>
+
+    <div class="table-wrapper">
+        <div class="table-container">
+          <table>
+              <tr>
+                  <th>Competators</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Location</th>
+              </tr>
+              <tr>
+                  <td>WHS vs. AHS</td>
+                  <td>10/6/25</td>
+                  <td>12:00pm</td>
+                  <td class="place" onclick="findSchool(this);">Williamstown High School</td>
+              </tr>
+              <tr>
+                  <td>WHS vs. RHS</td>
+                  <td>10/8/25</td>
+                  <td>1:00pm</td>
+                  <td class="place" onclick="findSchool(this);">Random High School</td>
+              </tr>
+          </table>
+          <div id="table-ext">
+              <a href="schedule">See More</a>
+          </div>
+      </div>
+  </div>
+
+  <footer>
+      <div class="row text-center sections">
+        <div class="col-md-4">
+            <h5>Links</h5>
+            <ul class="list list-unstyled">
+                <li class="list-item"><a href="/">Home</a></li>
+                <li class="list-item"><a href="about">About</a></li>
+                <li class="list-item"><a href="roster">Roster</a></li>
+                <li class="list-item"><a href="schedule">Schedule</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <ul class="list list-unstyled">
+              <li class="list-item">jjernagen@monroetwp.k12.nj.us</li>
+              <li class="list-item" style="cursor: pointer;" onclick="window.location = 'https://monroetwp.k12.nj.us'">Monroe Township Webstie</li>
+              <li class="list-item"></li>
           </ul>
         </div>
-      </nav>
+        <div class="col-md-4">
+            <h5>Website</h5>
+            <p style="font-family: 'Poppins'; font-style: italic;">Designed by Nicky Fanelli.</p>
+          </div>
+      </div>
+      <div class="row text-center copyright">
+          <div class="col-12">
+              <p>Copyright © 2020. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
 
-      <section id="hero">
-          <img src="images/jumbotron.jpg" id="main-image" alt="Team Photo">
-      </section>
-
-      <div class="table-wrapper">
-          <div class="table-container">
-            <table>
-                <tr>
-                    <th>Competators</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>WHS vs. AHS</td>
-                    <td>10/6/25</td>
-                    <td>12:00pm</td>
-                    <td class="place" onclick="findSchool(this);">Williamstown High School</td>
-                </tr>
-                <tr>
-                    <td>WHS vs. RHS</td>
-                    <td>10/8/25</td>
-                    <td>1:00pm</td>
-                    <td class="place" onclick="findSchool(this);">Random High School</td>
-                </tr>
-            </table>
-            <div id="table-ext">
-                <a href="schedule">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
