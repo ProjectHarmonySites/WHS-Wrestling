@@ -131,3 +131,24 @@ footer .sections a {
     text-decoration: underline;
     font-style: italic;
 }
+
+.poppins {
+    font-family: "Poppins";
+}
+
+.permanent-marker {
+    font-family: "Permanent Marker";
+}
+
+#team img {
+    width: 100%;
+}
+
+.new-section {
+    margin-top: 9em;
+}
+
+.btn-brave-blue {
+    background-color: #4169e1;
+    color: #ffffff;
+}
