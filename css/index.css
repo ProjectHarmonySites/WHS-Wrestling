@@ -37,7 +37,6 @@ table {
     border: 2px solid #00000025;
     background-color: #ffffff;
     font-size: 1.2rem;
-    border-bottom: none;
 }
 
 .table-wrapper {
@@ -156,7 +155,7 @@ footer .sections a {
  .card {
     text-transform: uppercase;
     width: 85%;
-    height: 50vh;
+    height: 21em;
     margin: 0 0 1em 0;
 }
 
@@ -175,4 +174,39 @@ footer .sections a {
  .card-wrapper {
     display: flex;
     justify-content: space-around;
+}
+
+.no-btm-border {
+    border-bottom: none;
+}
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 600px) {
+    table td  {
+        font-size: 1rem;
+    }
+
+    table th {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    table td  {
+        font-size: 0.9rem;
+    }
+
+    table th {
+        font-size: 1.2rem;
+    }
+} 
+
+@media only screen and (max-width: 400px) {
+    table td  {
+        font-size: 0.8rem;
+    }
+
+    table th {
+        font-size: 1rem;
+    }
 }
