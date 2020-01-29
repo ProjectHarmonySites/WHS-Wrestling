@@ -180,6 +180,10 @@ footer .sections a {
     border-bottom: none;
 }
 
+p {
+    font-size: 1.25rem;
+}
+
 /* Responsive Media Queries */
 @media only screen and (max-width: 600px) {
     table td  {
