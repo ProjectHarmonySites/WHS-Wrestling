@@ -1,7 +1,14 @@
 {
-    "0": ["WHS vs. AHS", "10/6/25", "12:00pm", "Williamstown High School"],
-    "1": ["RSD vs. SHS", "10/6/25", "12:00pm", "Williamstown High School"],
-    "2": ["RSD vs. SHS", "10/6/25", "12:00pm", "Williamstown High School"],
-    "3": ["RSD vs. SHS", "10/6/25", "12:00pm", "Williamstown High School"],
-    "4": ["RSD vs. SHS", "10/6/25", "12:00pm", "Williamstown High School"]
+    "0": ["NJSIAA Group V Playoffs", "2/10/20", "?", "?"],
+    "1": ["NJSIAA Group V Playoffs", "2/12/20", "?", "?"],
+    "2": ["NJSIAA Groip V Sec. Final", "2/14/20", "?", "?"],
+    "3": ["NJSIAA Group V State Champ.", "2/16/20", "?", "Toms River North HS"],
+    "4": ["JV Tournament", "2/17/20", "?", "?"],
+    "5": ["District 31 Tournament", "2/22", "?", "Williamstown High School"],
+    "6": ["Region 8 Champ. Pre. Rounds", "2/26/20", "?", "EHT"],
+    "7": ["Region 8 Champ. Quart. Rounds", "2/28/20", "?", "EHT"],
+    "8": ["Region 8 Champ. Semi. + Finals", "2/29/20", "?", "?"],
+    "9": ["NJSIAA State Champ.", "3/5/20", "All Day", "Boardwlk Hall, AC"],
+    "10": ["NJSIAA State Champ.", "3/6/20", "All Day", "Boardwlk Hall, AC"],
+    "11": ["NJSIAA State Champ.", "3/7/20", "All Day", "Boardwlk Hall, AC"]
 }
