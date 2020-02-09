@@ -106,6 +106,9 @@ footer {
     position: relative;
     color: #ffffff;
     font-family: "Poppins";
+    height: 5.5%;
+    margin-top: 5.5%;
+    clear: both;
 }
 
 .copyright p {
@@ -188,6 +191,28 @@ p {
 
 .right {
     float: right;
+}
+
+.wrapper-404-img {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0 0 0;
+}
+
+.wrapper-404-img img {
+    width: 100vw;
+    height: 50vh;
+}
+
+.wrapper-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 2em 0;
+}
+
+.wrapper-404 button {
+    margin: 1em 0 0 0;
 }
 
 /* Responsive Media Queries */
