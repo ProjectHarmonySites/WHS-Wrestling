@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /client
+Noindex: /404
+Noindex /policy
