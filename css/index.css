@@ -101,6 +101,12 @@ th {
     cursor: pointer;
 }
 
+#table-no-events {
+    font-size: 2rem;
+    font-family: "Permanent Marker";
+    text-transform: lowercase;
+}
+
 footer {
     background-color: #172d4d;
     position: relative;

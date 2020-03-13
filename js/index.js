@@ -64,4 +64,4 @@ function findSchool(text) {
     window.open(`https://www.google.com/maps/search/${text.innerHTML}, NJ`);
 }
 
-load();
+// load();
