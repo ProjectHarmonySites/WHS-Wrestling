@@ -1,14 +1,14 @@
 {
-    // "0": ["NJSIAA Group V Playoffs", "2/10/20", "6:00pm", "Williamstown High School"],
-    // "1": ["NJSIAA Group V Playoffs", "2/12/20", "6:00pm", "TBA"],
-    // "2": ["NJSIAA Groip V Sec. Final", "2/14/20", "6:00pm", "TBA"],
-    // "3": ["NJSIAA Group V State Champ.", "2/16/20", "TBA", "Toms River North HS"],
-    // "4": ["District 31 Tournament", "2/22", "10:00am", "Williamstown High School"],
-    // "5": ["Region 8 Champ. Pre. Rounds", "2/26/20", "5:30pm", "EHT"],
-    // "6": ["Region 8 Champ. Quart. Rounds", "2/28/20", "5:30pm", "EHT"],
-    // "7": ["Region 8 Champ. Semi. + Finals", "2/29/20", "10:00am", "EHT"],
-    // "8": ["NJSIAA State Champ.", "3/5/20", "All Day", "Boardwlk Hall, AC"],
-    // "9": ["NJSIAA State Champ.", "3/6/20", "All Day", "Boardwlk Hall, AC"],
-    // "10": ["NJSIAA State Champ.", "3/7/20", "All Day", "Boardwlk Hall, AC"]
-    "0": ["School X vs School Y", "4/20/21", "4:00pm", "Toms River North HS"],
+    "0": ["Team Meeting", "TBD", "2:30pm", "Williamstown High School Classroom D111"],
+    "1": ["Weight Certifications", "11/11/20", "2:30pm", "Williamstown High School Boys Gym Locker Room"],
+    "2": ["Weight Certifications", "12/3/20", "2:30pm", "Williamstown High School Team Locker Room"],
+    "3": ["Parent Meeting", "12/5/20", "11:30am", "Williamstown High School Classroom D111"],
+    "4": ["Eastern Scrimmage", "12/9/20", "3:00pm", "Eastern High School"],
+    "5": ["Winslow Scrimmage", "12/12/20", "9:00am", "Williamstown High School"],
+    "6": ["Wrestle Offs", "12/14/20", "2:30PM", "Williamstown High School (Closed to the Public)"],
+    "7": ["Beast of East Tournament", "12/19/20", "8:00am", "Bob Carpenter Center University of Delaware"],
+    "8": ["Beast of East Tournament", "12/20/20", "8:00am", "Bob Carpenter Center University of Delaware"],
+    "9": ["Egg Harbor Township Tri/Quad", "12/23/20", "2:00pm", "Egg Harbor Township High School"],
+    "10": ["EHT AOM JV/Varsity Tournament", "12/28/20", "10:00am", "Egg Harbor Township High School"]
+
 }
