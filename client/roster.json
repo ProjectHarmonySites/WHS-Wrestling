@@ -1,0 +1,10 @@
+{
+    "__Last, First": ["'M' for male, or 'F' for female", "Grade (Type number without quotes)", "1. (Weight without quotes), 2. (Position with quotes)"],
+    "Forant, Olivia": ["F", 9, "Manager"],
+    "LaPorta Samantha": ["F", 9, "Manager"],
+    "Owens, Mia": ["F", 9, "Manager"],
+    "Chatburn, Kylie": ["F", 10, "Manager"],
+    "Tirado, Rachel": ["F", 10, "Manager"],
+    "Mulloy, Delaney": ["F", 12, "Manager"],
+    "Saia, Giavanna": ["F", 12, "Manager"]
+}
