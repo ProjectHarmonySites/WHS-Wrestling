@@ -71,7 +71,7 @@ function nextImage() {
     if(index == -1) return;
 
     index++;
-    if(index >= imagesArray.length) 0;
+    if(index >= imagesArray.length) index = 0;
 
     fullscreenImage(imagesArray[index]);
 }
