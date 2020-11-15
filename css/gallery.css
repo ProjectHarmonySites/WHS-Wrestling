@@ -125,12 +125,19 @@
 	cursor: pointer;
 }
 
+#fullscreen-img .x:hover .line {
+	background-color: #fefefeef;
+}
+
 #fullscreen-img .x .line {
 	width: 34px;
 	height: 5px;
 	border-radius: 2px;
-	background-color: #ffffff;
+	background-color: #fefefe9a;
 	margin: 0.25em 0;
+	transition-duration: 0.15s;
+	-webkit-transition-duration: 0.15s;
+	-moz-transition-duration: 0.15s;
 }
 
 #fullscreen-img .x .line:first-child {
@@ -142,55 +149,47 @@
 }
 
 #fullscreen-img .left-arrow::before {
-	content: '';
-	padding: 25vh 5vh 0 25vh;
-}
-
-#fullscreen-img .left-arrow {
+	content: " ";
 	position: absolute;
-	left: 25px;
-	top: 50vh;
+	left: 0;
+	top: 40vh;
+	border-left: 4px solid #fefefe9a;
+	border-bottom: 4px solid #fefefe9a;
+	border-radius: 2px;
+	width: 15vh;
+	height: 15vh;
+	transform: rotate(45deg);
 	cursor: pointer;
-	height: 30vh;
-}
-
-#fullscreen-img .left-arrow .line {
-	background-color: #5a5a5a;
-	width: 30vh;
-	height: 8px;
-}
-
-#fullscreen-img .left-arrow .line:first-child {
-	transform: translateY(-9.65vh) rotate(-45deg);
-}
-
-#fullscreen-img .left-arrow .line:last-child {
-	transform: translateY(9.65vh) rotate(45deg);
+	margin: 5vh 8vw;
+	transition-duration: 0.15s;
+	-webkit-transition-duration: 0.15s;
+	-moz-transition-duration: 0.15s;
 }
 
 #fullscreen-img .right-arrow::before {
-	content: '';
-	padding: 25vh 5vh 0 25vh;
-}
-
-#fullscreen-img .right-arrow {
+	content: " ";
 	position: absolute;
-	right: 25px;
-	top: 50vh;
-	cursor: pointer;
-	height: 30vh;
+	right: 0;
+	top: 40vh;
+    border-right: 4px solid #fefefe9a;
+	border-top: 4px solid #fefefe9a;
+	border-radius: 2px;
+    width: 15vh; 
+    height: 15vh;
+    transform: rotate(45deg);
+    cursor: pointer;
+	margin: 5vh 8vw;
+	transition-duration: 0.15s;
+	-webkit-transition-duration: 0.15s;
+	-moz-transition-duration: 0.15s;
 }
 
-#fullscreen-img .right-arrow .line {
-	background-color: #5a5a5a;
-	width: 30vh;
-	height: 8px;
+#fullscreen-img .right-arrow:hover::before {
+	border-right: 4px solid #fefefeef;
+	border-top: 4px solid #fefefeef;
 }
 
-#fullscreen-img .right-arrow .line:first-child {
-	transform: translateY(-9.65vh) rotate(45deg);
-}
-
-#fullscreen-img .right-arrow .line:last-child {
-	transform: translateY(9.65vh) rotate(-45deg);
+#fullscreen-img .left-arrow:hover::before {
+	border-left: 4px solid #fefefeef;
+	border-bottom: 4px solid #fefefeef;
 }
