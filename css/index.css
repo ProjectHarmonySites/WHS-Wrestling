@@ -18,11 +18,11 @@ html, body {
 }
 
 .bg-brave-blue {
-    background-color: #4169e1;
+    background-color: #007BFF;
 }
 
 .table-blue {
-    background-color: #4169e1;
+    background-color: #007BFF;
 }
 
 #main-image {
@@ -62,7 +62,7 @@ td {
 }
 
 th {
-    background-color: #4169e1 !important;
+    background-color: #007BFF !important;
     color: #ffffff;
     font-family: "Permanent Marker";
     font-weight: 200;
@@ -74,7 +74,7 @@ th {
 }
 
 .place {
-    color: #4169e1;
+    color: #007BFF;
     text-decoration: underline;
     font-weight: 600;
     cursor: pointer;
@@ -159,7 +159,7 @@ footer .sections a {
 }
 
 .btn-brave-blue {
-    background-color: #4169e1;
+    background-color: #007BFF;
     color: #ffffff;
 }
 
