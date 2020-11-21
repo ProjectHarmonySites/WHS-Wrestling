@@ -24,7 +24,7 @@ function fillOutTable(data) {
                     <td>${data[i][0]}</td>
                     <td>${data[i][1]}</td>
                     <td>${data[i][2]}</td>
-                    <td class="place" onclick="findSchool(this);">${data[i][3]}</td>
+                    <td class="${data[i][3] === "TBD" ? "tbd-place" : "place"}" ${data[i][3] === "TBD" ? "" : 'onclick="findSchool(this);"'}>${data[i][3]}</td>
                 </tr>`);
             }
         }
@@ -48,7 +48,7 @@ function fillOutTableThree(data) {
                     <td>${data[i][0]}</td>
                     <td>${data[i][1]}</td>
                     <td>${data[i][2]}</td>
-                    <td class="place" onclick="findSchool(this);">${data[i][3]}</td>
+                    <td class="${data[i][3] === "TBD" ? "tbd-place" : "place"}" ${data[i][3] === "TBD" ? "" : 'onclick="findSchool(this);"'}>${data[i][3]}</td>
                 </tr>`);
                 s++;
             }   
