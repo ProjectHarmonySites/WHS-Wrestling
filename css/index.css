@@ -99,6 +99,10 @@ th {
     margin: 0 0 5em 0;
 }
 
+.change-margin-bottom {
+    margin-bottom: 0.5em !important;
+}
+
 #table-ext a {
     font-size: 1.25rem;
     color: #7494f1;
