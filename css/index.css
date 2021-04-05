@@ -1,0 +1,14 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
+/* Blue: #007BFF */
+
+/* =============================================================================================== */
+/* Hero Section
+/* =============================================================================================== */
+
+#hero img {
+    width: 100vw;
+    height: auto;
+}

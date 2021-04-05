@@ -8,8 +8,4 @@ function HandleButtonEvents() {
     }
 }
 
-window.onload = function() {
-
-    HandleButtonEvents();
-
-} 
+window.onload = HandleButtonEvents;

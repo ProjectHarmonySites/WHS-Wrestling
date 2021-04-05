@@ -1,7 +1,5 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
 /* Blue: #007BFF */
 
@@ -13,10 +11,6 @@
 html, body {
     overflow-x: hidden;
     box-sizing: border-box;
-}
-
-.hidden {
-    display: none !important;
 }
 
 /* =============================================================================================== */
