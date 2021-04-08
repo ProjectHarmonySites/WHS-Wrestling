@@ -1,7 +1,7 @@
 const ScheduleTable = document.querySelector("#schedule table");
 const ScheduleTableExt = document.querySelector("#schedule #table-ext");
 
-// Function created to fill out the schedule table on the index page
+/* Function created to fill out the schedule table on the index page */
 function fillTable(jsonData) {
 
     var currentDate = new Date(); // Get the current date
@@ -47,7 +47,7 @@ function fillTable(jsonData) {
             </tr>
             `
 
-            count++;
+            count++; // Increment the item count variable
         }
     }
 
@@ -56,7 +56,8 @@ function fillTable(jsonData) {
     }
 }
 
-// Function called when location is clicked; opens the location as a search in google maps
+/* Function called when location is clicked; opens the location as a search in google maps
+*/
 function findSchool(element) {
     // Get the target location and append NJ USA to it.
     let location = element.innerHTML.trim() + ", NJ USA";
@@ -65,9 +66,11 @@ function findSchool(element) {
     window.open(`https://www.google.com/maps/search/${location}`);
 }
 
-/* Function created to read json data from local filepath and pass it 
-*  as first parameter to the given "function pointer".
-*/
+/** Function created to read json data from local filepath and pass it 
+  *  as first parameter to the given "function pointer".
+  * @param {string} filepath
+  * @param {to} functionPtr
+  */
 function readJsonData(filepath, functionPtr) {
 
     var request = new XMLHttpRequest();
@@ -82,8 +85,9 @@ function readJsonData(filepath, functionPtr) {
     request.send(null);
 }
 
-// Window on load function
+/* Window on load function */
 window.onload = function() {
+
 
     // Read the schedule.json data and pass it to the fillTable function.
     readJsonData("client/schedule.json", fillTable);
