@@ -86,10 +86,9 @@ function readJsonData(filepath, functionPtr) {
 }
 
 /* Window on load function */
-window.onload = function() {
-
+window.addEventListener('load', function() {
 
     // Read the schedule.json data and pass it to the fillTable function.
     readJsonData("client/schedule.json", fillTable);
 
-}
+});

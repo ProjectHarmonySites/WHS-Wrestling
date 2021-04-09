@@ -182,3 +182,15 @@
     border-radius: 5px;
     background-color: #007BFF40;
 }
+
+@media only screen and (max-width: 700px) {
+    .split-half {
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .split-half div { min-width: 85%; }
+
+    .split-half img { margin: 1em 0; }
+}
