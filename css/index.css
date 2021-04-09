@@ -1,6 +1,5 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
 /* Blue: #007BFF */
 
@@ -191,6 +190,81 @@
     }
 
     .split-half div { min-width: 85%; }
-
     .split-half img { margin: 1em 0; }
+}
+
+/* =============================================================================================== */
+/* First Year Players Section
+/* =============================================================================================== */
+
+#first-year-players {
+    text-align: center;
+}
+
+#first-year-players h1 {
+    font-family: "Permanent Marker", "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#first-year-players .carousel {
+    margin: 2em 0 0 0;
+}
+
+#first-year-players .card-group {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#first-year-players .card-group .card {
+    background-color: transparent;
+    border: solid #94777745 1px;
+    max-height: 21em;
+    height: 21em;
+    width: 20em;
+    max-width: 20em;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#first-year-players .card-group .card h1 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.75rem;
+}
+
+#first-year-players .card-group .card p {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#first-year-players a button {
+    margin: 2em 0;
+    font-size: 1.5rem; 
+    font-family: "Permanent Marker", Arial, Helvetica, sans-serif;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 0.25em 1em;
+    cursor: pointer;
+
+    transition: all ease-in-out;
+    -webkit-transition: all ease-in-out;
+    -moz-transition: all ease-in-out;
+    
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
+
+#first-year-players a button:hover {
+    color: #0f0f0f;
 }
