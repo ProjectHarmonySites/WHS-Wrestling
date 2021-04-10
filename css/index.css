@@ -137,63 +137,6 @@
 }
 
 /* =============================================================================================== */
-/* Info Section
-/* =============================================================================================== */
-
-.split-half {
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-}
-
-.split-half img {
-    max-width: 45%;
-}
-
-.split-half div {
-    max-width: 50%;
-    text-align: center;
-}
-
-.split-half div h1 {
-    font-family: "Permanent Marker", "Poppins", Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 2.3rem;
-    margin: 0 0 0.4em 0;
-}
-
-.split-half div p {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divider {
-    margin: 5em 0;
-    width: 85vw;
-    height: 4px;
-    border-radius: 5px;
-    background-color: #007BFF40;
-}
-
-@media only screen and (max-width: 700px) {
-    .split-half {
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-    }
-
-    .split-half div { min-width: 85%; }
-    .split-half img { margin: 1em 0; }
-}
-
-/* =============================================================================================== */
 /* First Year Players Section
 /* =============================================================================================== */
 
