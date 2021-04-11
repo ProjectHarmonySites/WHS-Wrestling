@@ -2,102 +2,86 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- SEO Optimization -->
-  <meta name="description" content="Coached by Jonathan Jernegan, John Deangelis, and Robert Bastien, all well respected and valued coaches, this team knows how to pin to win!">
+    <!-- SEO Optimization -->
+    <meta name="description" content="Coached by Jonathan Jernegan, John Deangelis, and Robert Bastien, all well respected and valued coaches, this team knows how to pin to win!">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Cloud Flare -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Internal Stylesheets -->
-  <link rel="stylesheet" href="css/index.css">
+    <!-- Internal Stylesheets -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/roster.css">
 
-  <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
-  
-  <link rel="import" href="client/schedule.json">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 
-  <title>Roster | Williamstown Wrestling</title>
+    <title>Roster | Williamstown Wrestling</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-brave-blue">
-        <a href="/" class="navbar-brand navbar-title">Williamstown Wrestling</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-              <li class="nav-item active"><a href="roster" class="nav-link">Roster<span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a href="schedule" class="nav-link">Schedule</a></li>
-              <li class="nav-item"><a href="gallery" class="nav-link">Gallery</a></li>
+    <nav>
+        <a href="/" id="logo-text"><h1>Williamstown Wrestling</h1></a>
+        <div class="navbar-collapse">
+            <ul class="website-links">
+                <li class="link"><a href="/">Home</a></li>
+                <li class="link"><a href="about">About</a></li>
+                <li class="link"><a href="roster">Roster</a></li>
+                <li class="link selected"><a href="schedule">Schedule</a></li>
+                <li class="link"><a href="gallery">Gallery</a></li>
             </ul>
-            <span class="navbar-text">
-                <a href="https://www.facebook.com/lfauerbach1" target="_blank" class="fa fa-facebook mr-3"></a>
+
+            <div class="links">
                 <a href="https://twitter.com/WHSWrestlingNJ?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="fa fa-twitter mr-3"></a>
-            </span>
+                <a href="https://www.facebook.com/lfauerbach1" target="_blank" class="fa fa-facebook mr-3"></a>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="wrapper">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </nav>
 
-    <section id="players">
-        <div class="row mt-4">
-            <div class="col-12 permanent-marker">
-                <h1 class="pl-5 pb-2">Roster</h1>
-            </div>
-        </div>
-        <div class="row text-center" id="card-location">
-    
-            <!-- Location where the cards are added in javascript -->
-
-        </div>
+    <section id="members">
+        <h1>Roster</h1>
+        <div id="cards"></div>
     </section>
-    
-    <footer id="footer">
-        <div class="row text-center sections">
-          <div class="col-md-4">
-              <h5>Links</h5>
-              <ul class="list list-unstyled">
-                  <li class="list-item"><a href="/">Home</a></li>
-                  <li class="list-item"><a href="about">About</a></li>
-                  <li class="list-item"><a href="roster">Roster</a></li>
-                  <li class="list-item"><a href="schedule">Schedule</a></li>
-                  <li class="list-item"><a href="gallery">Gallery</a></li>
-              </ul>
-          </div>
-          <div class="col-md-4">
-            <h5>Contact</h5>
-            <ul class="list list-unstyled">
-                <li class="list-item">jjernegan@monroetwp.k12.nj.us</li>
-                <li class="list-item" style="cursor: pointer;" onclick="window.location = 'https://monroetwp.k12.nj.us'">Monroe Township Webstie</li>
-                <li class="list-item"></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-              <h5>Legal</h5>
-              <ul class="list list-unstyled">
-                  <li class="list-item"><a href="policy/cookies">Cookies</a></li>
-                  <li class="list-item"><a href="policy/privacy">Privacy</a></li>
-              </ul>
+
+    <footer>
+        <div class="wrapper">
+            <div>
+                <h1>Links</h1>
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="about"><li>About</li></a>
+                    <a href="roster"><li>Roster</li></a>
+                    <a href="schedule"><li>Schedule</li></a>
+                    <a href="gallery"><li>Gallery</li></a>
+                </ul>
+            </div>
+            <div>
+                <h1>Contact</h1>
+                <ul>
+                    <a><li>jjernegan@monroetwp.k12.nj.us</li></a> 
+                    <a href="https://monroetwp.k12.nj.us" target="_blank"><li>Monroe Township Website</li></a> 
+                </ul>
+            </div>
+            <div>
+                <h1>Legal</h1>
+                <ul>
+                    <a href="legal/cookies"><li>Legal</li></a>
+                    <a href="legal/privacy"><li>Privacy</li></a>
+                </ul>
             </div>
         </div>
-        <div class="row text-center copyright">
-            <div class="col-12">
-                <p>© 2020 Williamstown Wrestling. All Rights Reserved.</p>
-            </div>
-        </div>
+        <h3>Copyright© 2021 Williamstown Wrestling. All Rights Reserved.</h3>
     </footer>
 
-    <!-- Optional JavaScript -->
+    <script src="js/nav.js"></script>
     <script src="js/roster.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

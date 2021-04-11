@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+#members h1 {
+    font-family: "Permanent Marker";
+    margin: 0.5em 0 0.5em 0.5em;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+#members #cards {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#members .card {
+    background-color: transparent;
+    border: solid #94777745 1px;
+    max-height: 21em;
+    height: 21em;
+    width: 20em;
+    max-width: 20em;
+    border-radius: 10px;
+
+    display: inline-block;
+    margin: 0 3% 3% 3%;
+}
+
+#members .card h1 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin: 0.75em 0 0.5em 0;
+    line-height: 3rem;
+}
+
+#members .card p {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-align: center;
+}
