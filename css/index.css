@@ -76,7 +76,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: 2em;
     border: 2px solid #00000025;
     border-style: solid;
