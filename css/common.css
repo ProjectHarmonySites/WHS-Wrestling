@@ -215,6 +215,17 @@ footer h3 {
     padding: 0 0 0.2em 0;
 }
 
+@media only screen and (max-width: 500px) {
+    footer .wrapper {
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+
+    footer .wrapper div {
+        margin: 0 0 1.5em 0;
+    }
+}
 
 /* =============================================================================================== */
 /* Info Section
