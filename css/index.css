@@ -1,36 +1,22 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
-/* Blue: #4169e1 */
+/* Blue: #007BFF */
 
-html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =============================================================================================== */
+/* Hero Section
+/* =============================================================================================== */
 
-.navbar-title {
-    font-family: "Poppins";
-    font-weight: 900;
-}
-
-.bg-brave-blue {
-    background-color: #007BFF;
-}
-
-.table-blue {
-    background-color: #007BFF;
-}
-
-#main-image {
+#hero img {
     width: 100vw;
     height: auto;
 }
 
-table {
+/* =============================================================================================== */
+/* Schedule Section
+/* =============================================================================================== */
+
+#schedule table {
     margin: 2em 0 0 0;
     width: 90vw;
     border-collapse: collapse;
@@ -40,20 +26,20 @@ table {
     font-size: 1.2rem;
 }
 
-.table-wrapper {
+#schedule .table-wrapper {
     display: flex;
     justify-content: space-around;
 }
 
-table tr {
+#schedule table tr {
     text-align: center;
 }
 
-table tr:hover, #table-ext:hover {
+#schedule table tr:hover, #table-ext:hover {
     background-color: rgb(252, 252, 252);
 }
 
-td {
+#schedule td {
     border: none;
     height: 50px;
     vertical-align: middle;
@@ -61,7 +47,7 @@ td {
     font-weight: 10;
 }
 
-th {
+#schedule th {
     background-color: #007BFF !important;
     color: #ffffff;
     font-family: "Permanent Marker";
@@ -73,24 +59,24 @@ th {
     vertical-align: middle;
 }
 
-.place {
+#schedule .place {
     color: #007BFF;
     text-decoration: underline;
     font-weight: 600;
     cursor: pointer;
 }
 
-.tbd-place {
+#schedule .tbd-place {
     color: #0f0f0f;
     text-decoration: none;
     font-weight: 600;
 }
 
-#table-ext {
+#schedule #table-ext {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: 2em;
     border: 2px solid #00000025;
     border-style: solid;
@@ -99,114 +85,24 @@ th {
     margin: 0 0 5em 0;
 }
 
-.change-margin-bottom {
+#schedule .change-margin-bottom {
     margin-bottom: 0.5em !important;
 }
 
-#table-ext a {
-    font-size: 1.25rem;
-    color: #7494f1;
-    text-decoration: none;
-    font-weight: 600;
+#schedule #table-ext a {
+    font-size: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #007BFF;
+    text-decoration: underline;
+    font-weight: 300;
     cursor: pointer;
 }
 
-#table-no-events {
+#schedule #no-events {
     font-size: 2rem;
     font-family: "Permanent Marker";
     text-transform: lowercase;
-}
-
-footer {
-    background-color: #172d4d;
-    position: relative;
-    color: #ffffff;
-    font-family: "Poppins";
-    height: 5.5%;
-    margin-top: 5.5%;
-    clear: both;
-}
-
-.copyright p {
-    margin: 0;
-    color: #eeeeee6c;
-}
-
-footer .sections {
-    padding: 1em 0 0 0;
-    font-family: "Permanent Marker";
-}
-
-footer .sections li {
-    font-family: "Poppins";
-    font-weight: 100;
-    font-style: italic;
-}
-
-footer .sections ul {
-    margin: 1em 0 0 0;
-}
-
-footer .sections a {
-    text-decoration: underline;
-    font-style: italic;
-}
-
-.poppins {
-    font-family: "Poppins";
-}
-
-.permanent-marker {
-    font-family: "Permanent Marker";
-}
-
-#team img {
-    width: 100%;
-}
-
-.new-section {
-    margin-top: 9em;
-}
-
-.btn-brave-blue {
-    background-color: #007BFF;
-    color: #ffffff;
-}
-
- .card {
-    text-transform: uppercase;
-    width: 85%;
-    height: 21em;
-    margin: 0 0 1em 0;
-}
-
- .card h1 {
-    font-family: "Poppins";
-    padding: 0.5em;
-    font-weight: 900;
-    text-align: center;
-}
-
- .card p {
-    font-size: 1.5rem;
-    font-family: "Poppins";
-}
-
- .card-wrapper {
-    display: flex;
-    justify-content: space-around;
-}
-
-.no-btm-border {
-    border-bottom: none;
-}
-
-p {
-    font-size: 1.25rem;
-}
-
-.right {
-    float: right;
+    margin-bottom: 8px;
 }
 
 /* Responsive Media Queries */
@@ -238,4 +134,84 @@ p {
     table th {
         font-size: 1rem;
     }
+}
+
+/* =============================================================================================== */
+/* First Year Players Section
+/* =============================================================================================== */
+
+#first-year-players {
+    text-align: center;
+}
+
+#first-year-players h1 {
+    font-family: "Permanent Marker", "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#first-year-players .carousel {
+    margin: 2em 0 0 0;
+}
+
+#first-year-players .card-group {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#first-year-players .card-group .card {
+    background-color: transparent;
+    border: solid #94777745 1px;
+    max-height: 21em;
+    height: 21em;
+    width: 20em;
+    max-width: 20em;
+    border-radius: 10px;
+
+    display: inline-block;
+    margin: 0 3% 3% 3%;
+}
+
+#first-year-players .card-group .card h1 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin: 0.75em 0 0.5em 0;
+    line-height: 3rem;
+}
+
+#first-year-players .card-group .card p {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#first-year-players a button {
+    margin: 2em 0;
+    font-size: 1.5rem; 
+    font-family: "Permanent Marker", Arial, Helvetica, sans-serif;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 0.25em 1em;
+    cursor: pointer;
+
+    transition: all ease-in-out;
+    -webkit-transition: all ease-in-out;
+    -moz-transition: all ease-in-out;
+    
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
+
+#first-year-players a button:hover {
+    color: #0f0f0f;
 }

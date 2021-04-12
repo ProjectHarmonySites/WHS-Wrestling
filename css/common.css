@@ -1,0 +1,285 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+/* Blue: #007BFF */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* =============================================================================================== */
+/* Nav Bar
+/* =============================================================================================== */
+
+nav {
+    display: flex;
+    padding: 0 1em;
+    width: 100vw;
+    align-items: center;
+    height: 3.5em;
+    background-color: #007BFF;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li.link {
+    margin: 0 0.7em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+nav ul li.selected a { color: #ffffff !important; }
+
+
+nav #logo-text {
+    text-decoration: none;
+    margin: 0 0.5em 0 0;
+}
+
+nav h1 {
+    text-decoration: none;
+    font-family: "Poppins";
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+nav div.links a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 0.4em;
+    float: right;
+}
+
+nav div.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div.navbar-collapse .links {
+    position: absolute;
+    right: 1em;
+}
+
+nav div.burger {
+    display: none;
+    height: auto;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0 0.5em 0 0;
+}
+
+nav div.burger div.line {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 2px;
+ 
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    -moz-transition-property: transform;
+
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+}
+
+nav div.burger div.wrapper {
+    float: right;
+    margin: 0 2em 0 0;
+}
+
+nav div.burger.open div.line:nth-child(1) {
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+}
+
+nav div.burger.open div.line:nth-child(3) {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+}
+
+@media only screen and (max-width: 720px) {
+    
+    nav div.navbar-collapse {
+        position: absolute;
+        top: 3.5em;
+        left: 0;
+        background-color: #007BFF;
+        width: 100vw;
+        max-height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+
+        transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
+        -webkit-transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
+        -moz-transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
+    }
+
+    nav div.navbar-collapse.collapse {
+        max-height: 65em;
+        transition: max-height 1s cubic-bezier(1, 0, 0, 1);
+        -webkit-transition: max-height 1s cubic-bezier(1, 0, 0, 1);
+        -moz-transition: max-height 1s cubic-bezier(1, 0, 0, 1);
+    }
+
+    nav div.navbar-collapse ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 1em;
+    }
+
+    nav div.navbar-collapse ul li {
+        margin: 0.65em 0;
+    }
+
+    nav div.navbar-collapse div.links {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        margin: 0.5em 0 1em 1.5em;
+    }
+
+    nav div.burger { display: block; }
+}
+
+/* =============================================================================================== */
+/* Footer
+/* =============================================================================================== */
+
+footer {
+    width: 100vw;
+    text-align: center;
+    background-color: #007BFF;
+}
+
+footer .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2em 0;
+}
+
+footer .wrapper h1 {
+    font-family: "Permanent Marker", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+footer .wrapper ul {
+    list-style: none;
+    margin: 0.5em 0 0 0;
+}
+
+footer .wrapper a {
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 1.1rem; 
+}
+
+footer h3 {
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0 0 0.2em 0;
+}
+
+@media only screen and (max-width: 500px) {
+    footer .wrapper {
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+
+    footer .wrapper div {
+        margin: 0 0 1.5em 0;
+    }
+}
+
+/* =============================================================================================== */
+/* Info Section
+/* =============================================================================================== */
+
+.split-half {
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+}
+
+.split-half img {
+    max-width: 45%;
+}
+
+.split-half div {
+    max-width: 50%;
+    text-align: center;
+}
+
+.split-half div h1 {
+    font-family: "Permanent Marker", "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2.3rem;
+    margin: 0 0 0.4em 0;
+}
+
+.split-half div p {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    margin: 5em 0;
+    width: 85vw;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #007BFF40;
+}
+
+@media only screen and (max-width: 700px) {
+    .split-half {
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .split-half div { min-width: 85%; }
+    .split-half img { margin: 1em 0; }
+}

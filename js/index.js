@@ -1,52 +1,94 @@
-var tableTT = $("#schedule-top-three");
+const ScheduleTable = document.querySelector("#schedule table");
+const ScheduleTableExt = document.querySelector("#schedule #table-ext");
 
-function load() {
-    fetch("../client/schedule.json").then(function(resp) {
-        return resp.json();
-    }).then(function(data) {
-        fillOutTableThree(data);
-    });
-}
+/* Function created to fill out the schedule table on the index page */
+function fillTable(jsonData) {
 
-function fillOutTableThree(data) {
-    var todayRaw = new Date();
-    var today = new Date(`${todayRaw.getMonth() + 1}/${todayRaw.getDate()}/${todayRaw.getFullYear()}`);
+    var currentDate = new Date(); // Get the current date
+    currentDate.setDate(currentDate.getDate() - 1); // Decrement to yesterday's date
 
-    i = 0;
-    s = 0;
-    
-    var itemCount = 0;
+    var count = 0;
 
-    while(i < Object.keys(data).length) {
-        if(data[i].length == 4) {
-            var target = new Date(data[i][1]);
+    for(let i = 0; i < Object.keys(jsonData).length; i++) { // Loop through all json entries
 
-            if(target.getTime() >= today.getTime()) {
-                tableTT.append(`
-                <tr>
-                    <td>${data[i][0]}</td>
-                    <td>${data[i][1]}</td>
-                    <td>${data[i][2]}</td>
-                    <td class="${data[i][3] === "TBD" ? "tbd-place" : "place"}" ${data[i][3] === "TBD" ? "" : 'onclick="findSchool(this);"'}>${data[i][3]}</td>
-                </tr>`);
-                s++;
+        if(count >= 3) break; // Make sure that only the top three get displayed
 
-                itemCount++;
-            }   
-            if(s >= 3) {
-                break;
+        let targetData = jsonData[Object.keys(jsonData)[i]];
+
+        if(targetData.length == 3) { // Make sure that the given entry has enough data
+
+            // Make sure that today's date isn't past the entry date
+            let rawDate = targetData[0];
+            let date = new Date(rawDate);
+            if(date.getTime() < currentDate.getTime()) {
+                continue; // If the event has passed move onto the next
             }
+
+            // Get all the needed variables for data assignment
+            let eventName = Object.keys(jsonData)[i];
+            let time = targetData[1];
+            let location = targetData[2];
+
+            // Check to see if the location is TBD
+            var tbd = false;
+            if(location.toLowerCase() === "tbd") {
+                tbd = true;
+                location = location.toUpperCase();
+            }
+
+            // Assign to the table
+            ScheduleTable.innerHTML += 
+            `
+            <tr>
+                <td>${eventName}</td>
+                <td>${rawDate}</td>
+                <td>${time}</td>
+                <td class="${tbd ? "tbd-place" : "place"}" onclick="findSchool(this);">${location}</td>
+            </tr>
+            `
+
+            count++; // Increment the item count variable
         }
-        i++;
     }
 
-    if(itemCount <= 0) {
-        document.querySelector("div#table-ext").innerHTML = '<h1 id="table-no-events">No Upcoming Events</h1>';
+    if(count <= 0) {
+        ScheduleTableExt.innerHTML = "<h1 id='no-events'>No Upcoming Events</h1>";
     }
-} 
-
-function findSchool(text) {
-    window.open(`https://www.google.com/maps/search/${text.innerHTML}, NJ`);
 }
 
-load();
+/* Function called when location is clicked; opens the location as a search in google maps
+*/
+function findSchool(element) {
+    // Get the target location and append NJ USA to it.
+    let location = element.innerHTML.trim() + ", NJ USA";
+
+    // Open the location in a Google Maps Search
+    window.open(`https://www.google.com/maps/search/${location}`);
+}
+
+/** Function created to read json data from local filepath and pass it 
+  *  as first parameter to the given "function pointer".
+  * @param {string} filepath
+  * @param {to} functionPtr
+  */
+function readJsonData(filepath, functionPtr) {
+
+    var request = new XMLHttpRequest();
+    request.overrideMimeType("application/json");
+    request.open('GET', filepath, true);
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == "200") {
+            functionPtr(JSON.parse(request.responseText));
+        }
+    };
+
+    request.send(null);
+}
+
+/* Window on load function */
+window.addEventListener('load', function() {
+
+    // Read the schedule.json data and pass it to the fillTable function.
+    readJsonData("client/schedule.json", fillTable);
+
+});

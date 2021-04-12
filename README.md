@@ -9,17 +9,26 @@ The client toolset is a set of tools that you can use to update the website with
 ## Client Directory
 The client directory contains two files that can be used to update small portions of the website.
 
-- Schedule.json - This allows you to easily update the scedule, just follow the pre-existing format.
-- Roster.json - This allows you to eaisly update the roster (eg. add or remove people), just follow the pre-exisiting format.
+- Schedule.json - This allows you to easily update the schedule, just follow the pre-existing format.
+- Roster.json - This allows you to easily update the roster (eg. add or remove people), just follow the pre-existing format.
+- gallery-images - Adding or removing images from this directory will add or remove them from the website's [gallery page](https://williamstownwrestling.com/gallery).
 
 ---
 
-## The Image Gallery
+### Instructions for Adding Images to the Image Gallery
 
-The image gallery can be found on the gallery page. "https://williamstownwrestling.com/gallery". This gallery is automatically updated when image are added to the right directory and to the JSON file.
+1. Make sure you are logged into GitHub!
+1. Go to the backend client/gallery directory | [Click Here](https://github.com/ProjectHarmonySites/WHS-Wrestling/tree/master/client/gallery-images).
+1. Click on the *Add File* dropdown and choose **Upload Files**.
+1. Select the blue *choose your files* link and select the images you want.
+1. Scroll down to the bottom of the page and click the green **Commit Changes** button. *Hint: there is no need to fill out the commit fields(they automatically get filled in).*
 
-### Instructions for Updating the Image Gallery
+### Instructions for Removing Images from the Image Gallery
 
-1. Go to /images/gallery and upload your photos. (For the name space with underscores) *Eg. this_is_an_image.png* **All Images Must Be .png**
-1. Go to /images/gallery/gallery.json and add your image name into the file. *Eg. this_is_an_image* **Don't add the image extension ***(eg. .png)***
-1. Finally push the code to GitHub under the *master* branch and the website will automatically update the gallery with your new entry.
+1. Make sure you are logged into GitHub!
+1. Go to the backend client/gallery directory | [Click Here](https://github.com/ProjectHarmonySites/WHS-Wrestling/tree/master/client/gallery-images).
+1. Click on the image file that you don't want *(Upon clicking the file name you will be shown a preview of the image)*.
+1. Click on the **trash can button** that can be found in the top right of the image preview. *This button will be found right above the actual image*. 
+1. Scroll down to the bottom of the page and click the green **Commit Changes** button. *Hint: there is no need to fill out the commit fields(they automatically get filled in).*
+
+***Important Note: Make sure that when you are deleting images, you only delete the images from the `client/gallery-images` folder. Deleting images from any other folders or deleting any other files will result in your website no longer working!!!!!! Here is a link to the only place where you can add or delete images: [Click Here](https://github.com/ProjectHarmonySites/WHS-Wrestling/tree/master/client/gallery-images)***

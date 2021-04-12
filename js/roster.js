@@ -1,38 +1,59 @@
-const cardLocation = document.querySelector("#card-location");
+const RosterCards = document.querySelector("#members #cards");
 
-function load() {
-    fetch("../client/roster.json").then(function(resp) {
-        return resp.json();
-    }).then(function(data) {
-        fillOutRoster(data);
-    });
-}
+function fillRoster(jsonData) {
 
-function fillOutRoster(data) {
+    for(let i = 0; i < Object.keys(jsonData).length; i++) { // Loop through the data, but skip the first sample
 
-    for(var item in data) {
-        if(data[item] instanceof Object) {
-            if(item.startsWith("__")) continue;
+        // Get the target data
+        let targetData = jsonData[Object.keys(jsonData)[i]];
 
-            let name = item.toString();
-            let personData = data[item];
+        if(targetData.length != 3) continue; // Make sure that the given entry has enough data
 
-            // If gender neutral is needed just update the below ternary operator of code.
-            let htmlData = `
-            <div class="col-md-4 card-wrapper">
-                <div class="card">
-                    <h1>${name}</h1>
-                    <p>Gender: ${personData[0] == "F" ? "Female" : "Male"}</p>
-                    <p>Grade: ${personData[1]}</p>
-                    <p>${typeof personData[2] == "string" ? "Position" : "Weight"}: ${personData[2]}</p>
-                </div>
+        // Get the member data
+        let memberName = Object.keys(jsonData)[i].toUpperCase();
+        let gender = targetData[0];
+        let grade = targetData[1];
+        let position = targetData[2].toUpperCase();
+
+        // Append a new card with the member data
+        RosterCards.innerHTML += 
+        `
+        <div class="card">
+            <h1>${memberName}</h1>
+            <div>
+                <p>Gender: ${gender.toUpperCase() === "M" ? "Male" : "Female"}</p>
+                <p>Grade: ${grade}</p>
+                <p>Position: ${position}</p>
             </div>
-            `
-
-            cardLocation.innerHTML += htmlData;
-        }
+        </div>
+        `;
     }
 
 }
 
-load();
+/** Function created to read json data from local filepath and pass it 
+  *  as first parameter to the given "function pointer".
+  * @param {string} filepath
+  * @param {to} functionPtr
+  */
+ function readJsonData(filepath, functionPtr) {
+
+    var request = new XMLHttpRequest();
+    request.overrideMimeType("application/json");
+    request.open('GET', filepath, true);
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == "200") {
+            functionPtr(JSON.parse(request.responseText));
+        }
+    };
+
+    request.send(null);
+}
+
+/* Window on load event listener function */
+window.addEventListener('load', function() {
+
+    // Read the roster.json dat and pass it to the fillRoster function.
+    readJsonData("client/roster.json", fillRoster);
+
+});

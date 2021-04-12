@@ -1,5 +1,5 @@
 {
-    "__Last, First": ["'M' for male, or 'F' for female", "Grade (Type number without quotes)", "1. (Weight without quotes), 2. (Position with quotes)"],
+    "Last, First": ["'M' for male, or 'F' for female (with quotes)", "Grade (Type number without quotes)", "Position (with quotes)", "don't display"],
     "IACOVONE, ANTHONY": ["M", 10, "Wrestler"],
     "ZANELLA, CHANDLER": ["M", 10, "Wrestler"],
     "THOMAS, JEROME (JAYDEN)": ["M", 12, "Wrestler"],

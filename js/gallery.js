@@ -1,70 +1,61 @@
-const fullscreen_img = document.querySelector("#fullscreen-img");
-const image_name = document.querySelector("#fullscreen-img h3");
-const image_img = document.querySelector("#fullscreen-img .image-container img");
-const image_close = document.querySelector("#fullscreen-img .x");
-const image_arrow_left = document.querySelector("#fullscreen-img .left-arrow");
-const image_arrow_right = document.querySelector("#fullscreen-img .right-arrow");
+const FullscreenImage       = document.querySelector("#fullscreen-img");
+const ImageName             = document.querySelector("#fullscreen-img h3");
+const Image                 = document.querySelector("#fullscreen-img .image-container img");
+const ImageClose            = document.querySelector("#fullscreen-img .x");
+const ImageArrowLeft        = document.querySelector("#fullscreen-img .left-arrow");
+const ImageArrowRight       = document.querySelector("#fullscreen-img .right-arrow");
+const Gallery               = document.getElementById("gallery-images")
 
-var gallery;
 var currentImage;
 var imagesArray = [];
 
-function load() {
-    var jsonData;
+// Function to add the images to the gallery
+function addImages(imagePaths) {
 
-    fullscreenControls();
+    // Loop through all of the images and ...
+    for(let i = 1; i < imagePaths.length; i++) { // Skip the first entry
+        let splitImageName = imagePaths[i].href.split("/");
+        let imageName = splitImageName[splitImageName.length - 1].split(".")[0];
 
-    fetch("../images/gallery/gallery.json").then(function(resp) {
-        return resp.json();
-    }).then(function(data) {
-        let imageArray = data["active_images"];
-        addImages(imageArray);
-    });
-
-}
-
-function addImages(imageArray) {
-    gallery = document.getElementById("gallery-images");
-
-    for(let i = 0; i < imageArray.length; i++) {
-        let imageHTML = `<img onclick="fullscreenImage(this);" src="images/gallery/${imageArray[i]}.jpg" alt="${imageArray[i]}">`;
-        gallery.innerHTML += `<div class="img">${imageHTML}</div>`;
-        imagesArray.push(gallery.childNodes[i].childNodes[0]);
+        let imageHtml = `<img onclick="fullscreenImage(this);" src="${imagePaths[i].href}" alt="${imageName}" />`;
+        Gallery.innerHTML += `<div class="img">${imageHtml}</div>`;
+        imagesArray.push(Gallery.childNodes[i - 1].childNodes[0]);
     }
+
 }
 
-function fullscreenControls() {
-    image_close.onclick = closeFullscreenControls;
+function indexArray(image) { return currentImage.outerHTML === image.outerHTML; }
 
-    image_arrow_left.onclick = previousImage;
-    image_arrow_right.onclick = nextImage;
+function setupFullscreenControls() {
+    ImageClose.onclick = handleCloseFullscreenControls;
+
+    ImageArrowLeft.onclick = handleSelectPreviousImage;
+    ImageArrowRight.onclick = handleSelectNextImage;
 }
 
-function closeFullscreenControls() {
-    if(fullscreen_img.classList.contains("hidden")) return;
-    fullscreen_img.classList.add("hidden");
-    currentImage = null;
-    image_img.src = "";
-    image_name.innerHTML = "";
+function handleCloseFullscreenControls() {
+    if(FullscreenImage.classList.contains("hidden")) return;
+
+    FullscreenImage.classList.add("hidden"); // Hide the fullscreen controls
+    currentImage = null; // Clear the current image
+    Image.src = ""; // Clear the current image source
+    ImageName.innerHTML = ""; // Clear the current image name
 }
 
-function indexArray(image) {
-    return currentImage.outerHTML === image.outerHTML;
-}
-
-function previousImage() {
+function handleSelectPreviousImage() {
     if(currentImage == null || currentImage == NaN) return;
 
     let index = imagesArray.findIndex(indexArray);
     if(index == -1) return;
-
+    
     index--;
     if(index < 0) index = imagesArray.length - 1;
-
+    
     fullscreenImage(imagesArray[index]);
+
 }
 
-function nextImage() {
+function handleSelectNextImage() {
     if(currentImage == null || currentImage == NaN) return;
 
     let index = imagesArray.findIndex(indexArray);
@@ -81,10 +72,33 @@ function fullscreenImage(image) {
 
     let imageName = image.alt.replaceAll("_", " ");
 
-    image_img.src = image.src;
-    image_name.innerHTML = imageName;
+    Image.src = image.src;
+    ImageName.innerHTML = imageName;
 
-    fullscreen_img.classList.remove("hidden");
+    FullscreenImage.classList.remove("hidden");
 }
 
-load();
+function loadImages() {
+    let request = new XMLHttpRequest();
+    request.open('GET', "client/gallery-images", true);
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == "200") {
+            let parser = new DOMParser();
+            let html = parser.parseFromString(request.responseText, "text/html");
+            let files = html.querySelectorAll(".directory #files li a");
+
+            addImages(files);
+        }
+    };
+
+    request.send(null);
+
+}
+
+// On Window Load
+window.addEventListener('load', function() {
+
+    setupFullscreenControls();
+    loadImages();
+    
+});
