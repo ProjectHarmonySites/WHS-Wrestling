@@ -80,7 +80,7 @@ function fullscreenImage(image) {
 
 function loadImages() {
     let request = new XMLHttpRequest();
-    request.open('GET', "images/gallery", true);
+    request.open('GET', "client/gallery-images", true);
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == "200") {
             let parser = new DOMParser();
