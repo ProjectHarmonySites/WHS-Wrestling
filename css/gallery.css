@@ -1,3 +1,6 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 .hidden { display: none !important; }
 .capitalize { text-transform: capitalize !important; }
 
@@ -113,9 +116,11 @@
 #fullscreen-img h3 {
 	color: #ffffff;
 	font-weight: 100;
-	margin: 0.5em 0 0 0;
+	margin: 1em 0 0 0;
 	padding: 0;
+	font-size: 1.75rem;
 	text-align: center;
+	font-family: "Poppins";
 }
 
 #fullscreen-img .x {
