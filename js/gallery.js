@@ -100,11 +100,19 @@ function fullscreenImage(image) {
     request.send(null);
 }
 
+function bindEscapeKeyEvent() {
+    document.addEventListener('keydown', function(event) {
+        if(event.key === "Escape") {
+            handleCloseFullscreenControls();
+        }
+    });
+}
 
 // On Window Load
 window.addEventListener('load', function() {
 
     setupFullscreenControls();
+    bindEscapeKeyEvent();
     readJsonData("client/gallery-images.json", addImages);
     
 });
