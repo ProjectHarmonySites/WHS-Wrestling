@@ -12,14 +12,17 @@ var imagesArray = [];
 // Function to add the images to the gallery
 function addImages(imagePaths) {
 
-    // Loop through all of the images and ...
-    for(let i = 1; i < imagePaths.length; i++) { // Skip the first entry
-        let splitImageName = imagePaths[i].href.split("/");
-        let imageName = splitImageName[splitImageName.length - 1].split(".")[0];
+    let imageNames = imagePaths["selected_images"];
 
-        let imageHtml = `<img onclick="fullscreenImage(this);" src="${imagePaths[i].href}" alt="${imageName}" />`;
+    // Loop through all of the images and ...
+    for(let i = 0; i < imageNames.length; i++) { 
+        let imageName = imageNames[i].split(".");
+        imageName = imageName[0].replaceAll("_", " ");
+
+
+        let imageHtml = `<img onclick="fullscreenImage(this);" src="/client/gallery-images/${imageNames[i]}" alt="${imageName}" />`;
         Gallery.innerHTML += `<div class="img">${imageHtml}</div>`;
-        imagesArray.push(Gallery.childNodes[i - 1].childNodes[0]);
+        imagesArray.push(Gallery.childNodes[i].childNodes[0]);
     }
 
 }
@@ -78,27 +81,30 @@ function fullscreenImage(image) {
     FullscreenImage.classList.remove("hidden");
 }
 
-function loadImages() {
-    let request = new XMLHttpRequest();
-    request.open('GET', "client/gallery-images", true);
+/** Function created to read json data from local filepath and pass it 
+  *  as first parameter to the given "function pointer".
+  * @param {string} filepath
+  * @param {to} functionPtr
+  */
+ function readJsonData(filepath, functionPtr) {
+
+    var request = new XMLHttpRequest();
+    request.overrideMimeType("application/json");
+    request.open('GET', filepath, true);
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == "200") {
-            let parser = new DOMParser();
-            let html = parser.parseFromString(request.responseText, "text/html");
-            let files = html.querySelectorAll(".directory #files li a");
-
-            addImages(files);
+            functionPtr(JSON.parse(request.responseText));
         }
     };
 
     request.send(null);
-
 }
+
 
 // On Window Load
 window.addEventListener('load', function() {
 
     setupFullscreenControls();
-    loadImages();
+    readJsonData("client/gallery-images.json", addImages);
     
 });
