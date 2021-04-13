@@ -17,5 +17,22 @@
 }
 
 .wrapper-404 button {
-    margin: 1em 0 0 0;
+    margin: 2em 0 0 0;
+    font-size: 2rem;
+    font-family: "Permanent Marker", Arial, Helvetica, sans-serif;
+    width: 15em;
+    height: 2em;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.wrapper-404 button:hover {
+    color: #000000;
 }
