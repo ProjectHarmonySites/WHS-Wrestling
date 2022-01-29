@@ -7,13 +7,14 @@ function fillRoster(jsonData) {
         // Get the target data
         let targetData = jsonData[Object.keys(jsonData)[i]];
 
-        if(targetData.length != 3) continue; // Make sure that the given entry has enough data
+        if(targetData.length != 2) continue; // Make sure that the given entry has enough data
 
         // Get the member data
         let memberName = Object.keys(jsonData)[i].toUpperCase();
-        let gender = targetData[0];
-        let grade = targetData[1];
-        let position = targetData[2].toUpperCase();
+        let grade = targetData[0];
+        let position = targetData[1].toUpperCase();
+
+        let shouldUseWeightClass = position !== "MANAGER";
 
         // Append a new card with the member data
         RosterCards.innerHTML += 
@@ -21,9 +22,8 @@ function fillRoster(jsonData) {
         <div class="card">
             <h1>${memberName}</h1>
             <div>
-                <p>Gender: ${gender.toUpperCase() === "M" ? "Male" : "Female"}</p>
                 <p>Grade: ${grade}</p>
-                <p>Position: ${position}</p>
+                <p>${shouldUseWeightClass ? "Weight Class" : "Position"}: ${position}</p>
             </div>
         </div>
         `;

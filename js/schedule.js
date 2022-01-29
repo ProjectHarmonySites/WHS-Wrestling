@@ -73,6 +73,14 @@ function readJsonData(filepath, functionPtr) {
     request.send(null);
 }
 
+function findSchool(element) {
+    // Get the target location and append NJ USA to it.
+    let location = element.innerHTML.trim() + ", NJ USA";
+
+    // Open the location in a Google Maps Search
+    window.open(`https://www.google.com/maps/search/${location}`);
+}
+
 /* Window on load listener function */
 window.addEventListener('load', function() {
 
