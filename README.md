@@ -22,6 +22,7 @@ The client directory contains two files that can be used to update small portion
 1. Click on the *Add File* dropdown and choose **Upload Files**.
 1. Select the blue *choose your files* link and select the images you want.
 1. Scroll down to the bottom of the page and click the green **Commit Changes** button. *Hint: there is no need to fill out the commit fields(they automatically get filled in).*
+1. Finally, copy the exact filename of the image and add it to the JSON list found [here](https://github.com/ProjectHarmonySites/WHS-Wrestling/blob/master/client/gallery-images.json) (click on the pencil tool at the top right and add a comma followed by the exact filename of the picture surroned by quotation marks) (make sure you don't have a comma on the last item)
 
 ### Instructions for Removing Images from the Image Gallery
 
